@@ -2,7 +2,7 @@
 
 import { useActionState, useState } from "react";
 import { submitConditionReport, type ReportFormState } from "@/app/report/new/actions";
-import { createClient } from "@/lib/supabase/client";
+import { createClient } from "../lib/supabase/client";
 
 const initialState: ReportFormState = { status: "idle"};
 
@@ -59,7 +59,7 @@ function RatingScale({
     );
 }
 
-export function submitConditionReport({
+export function ConditionReportForm({
     courseId,
     courseName,
 }: {
